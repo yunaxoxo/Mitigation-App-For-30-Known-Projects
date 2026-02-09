@@ -1,0 +1,55 @@
+---
+title: "Mitigation Project Report"
+output: 
+  html_document:
+    syntax_highlighting: none
+geometry: a4paper
+params:
+  cost : NULL
+  status: NULL
+  selected_projects: NULL
+  solution_table: NULL
+---
+
+# Status
+`r params$status`
+
+# Optimized Cost
+```{r echo = FALSE}
+cat("\n\n")
+
+if (!is.null(params$solution_table) && nrow(params$solution_table) > 0) {
+
+  params$solution_table$Cost <-
+    paste0("$", formatC(
+      params$solution_table$Cost,
+      format = "f",
+      big.mark = ",",
+      digits = 2
+    ))
+
+  knitr::kable(params$solution_table, booktabs = TRUE)
+
+} else {
+  cat("No solution available because the problem is infeasible.")
+}
+```
+
+## Selected Projects
+```{r echo=FALSE}
+if (!is.null(params$selected_projects) && nrow(params$selected_projects) > 0) {
+knitr::kable(params$selected_projects, booktabs = TRUE)
+} else {
+cat("No projects selected.")
+}
+```
+
+## Solution Table
+```{r echo = FALSE}
+cat("\n\n") # add some space
+if (!is.null(params$solution_table) && nrow(params$solution_table) > 0) {
+knitr::kable(params$solution_table, booktabs = TRUE)
+} else {
+cat("No solution available because the problem is infeasible.")
+}
+```

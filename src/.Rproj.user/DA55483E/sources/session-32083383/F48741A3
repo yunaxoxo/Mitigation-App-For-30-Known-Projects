@@ -1,0 +1,26 @@
+{
+    "id": "F48741A3",
+    "path": "~/Documents/R/Final Project/src/R/build_min.r",
+    "project_path": "R/build_min.r",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1764468340213.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "37,17",
+        "scrollLine": "0"
+    },
+    "folds": "41|52|86|0|\n",
+    "lastKnownWriteTime": 1764591523,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1764601115655,
+    "read_only": false,
+    "read_only_alternatives": []
+}
